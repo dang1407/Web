@@ -1,0 +1,8 @@
+* {
+    margin: 0;    /*Lề */
+    padding: 10,10,10,10;  /*Đệm lót*/
+}
+
+.content {
+    background-color: #ebebeb;
+}
