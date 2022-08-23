@@ -1,0 +1,62 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết 
+*/
+
+/*
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng(kiểu chữ, dạng đường nét, hình dạng,...) 
+*/
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+}
+
+#header {
+  height: 46.5px;
+  background-color: #000;
+}
+
+#nav {
+}
+
+#nav li {
+  display: inline-block;
+  line-height: 46px;
+}
+
+#nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 0 24px;
+}
+
+#nav li:hover a {
+  color: #000;
+  background-color: #ccc;
+  display: inline-block;
+}
+
+#slider {
+}
+
+#content {
+}
+
+#footer {
+}
