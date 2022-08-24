@@ -21,7 +21,7 @@ html{
 }
 
 #nav {
-
+    display: inline-block;
 }
 
 #nav .subnav {
@@ -54,7 +54,7 @@ html{
     display: inline-block;
 }
 
-#nav > li:hover > a,
+#nav > li:hover > a,  /* dùng chung thuộc tính, selector_1, selector_2 */
 #nav .subnav li:hover a {
     background-color: #ccc;
     color: #000;
@@ -77,6 +77,21 @@ html{
   line-height: 38px;
 }
 
+#nav .nav-arrow-down {
+  font-size: 15px;
+}
+
+#header .search-btn {
+  color: #fff;  
+  float: right;
+  line-height: 46px;
+  padding: 0px 24px;
+  cursor: pointer;
+}
+
+#header .search-btn:hover {
+  background-color: #f44336;
+}
 
 #slider {
     min-height: 500px;
