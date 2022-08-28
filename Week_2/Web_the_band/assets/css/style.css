@@ -18,6 +18,11 @@ html{
 #header {
     height: 46px;
     background-color: #000;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
 }
 
 #nav {
@@ -84,9 +89,11 @@ html{
 #header .search-btn {
   color: #fff;  
   float: right;
-  line-height: 46px;
+  display: inline-block;
+  line-height: 46px; 
   padding: 0px 24px;
   cursor: pointer;
+
 }
 
 #header .search-btn:hover {
@@ -94,14 +101,57 @@ html{
 }
 
 #slider {
-    min-height: 500px;
-    background-color: #ccc;
+    width: 100%;
+    position: relative;
+    color: #fff;
+    padding-top: 50%;
+    margin-top: 46px;
+    background: url("/F8_Shop/Week_2/Web_the_band/assets/img/slider/slider_1.jpg") top center / cover no-repeat;
+}
+
+#slider .text-content {
+  position: absolute;
+  bottom: 48px;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  width: 100%;
+  text-align: center;
+  
+}
+
+#slider .text-heading {
+  /* position: absolute; */
+  color: #fff;
+  width: 100%;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+#slider .text-description {
+  /* position: absolute; */
+  margin-top: 25px;
+  font-size: 15px;
+  font-weight: bolder;
 }
 
 #content {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content .heading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+#content .sub-heading {
 
 }
 
+#content p {
+  text-align: justify;
+}
 #footer {
 
 }
