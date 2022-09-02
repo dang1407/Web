@@ -1,0 +1,191 @@
+/* Reset CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    /* line-height: 46px; */
+    height: 46px;
+    background-color: #000;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#nav {
+    display: flex;
+}
+
+#nav > #nav-item > a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 46px;
+    padding: 0 24px;
+    font-size: 15px;
+}
+
+#nav #nav-item .ti-angle-down {
+    font-size: 12px;
+}
+
+#nav .search-btn {
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+#nav .search-btn:hover {
+    background-color: red;
+    
+}
+#nav .search-btn .ti-search {
+    color: #fff;
+    line-height: 46px;
+    
+    
+}
+#nav #nav-item:hover .subnav a {
+    display: block;
+}
+
+#nav > #nav-item:hover > a,
+#nav  .subnav  div:hover  a
+{
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    background-color: #fff;
+    width: 120px;
+    
+}
+#nav .subnav a {
+    color: #000;
+    display: none;
+    text-decoration: none;
+    line-height: 46px;
+    padding-left: 12px;
+    width: 100%;
+}
+
+.slider {
+    margin-top: 46px;
+    background: url("/F8_Shop/Week_3/assets/slider/slider_1.jpg") top center / cover no-repeat;
+    padding-top: 50%; /*Ngoài cách này ra còn cách nào khác để set size ko?*/
+    position: relative;
+}
+
+.slider .text-content {
+    bottom: 48px;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+#heading-slider-1 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+#heading-slider-2 {
+    font-size: 15px;  
+}
+
+.content {
+    width: 800px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.main-heading {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 72px;
+    letter-spacing: 4px;  /* Khoảng cách chữ */
+}
+
+.sub-heading {
+    margin-top: 25px;
+    font-style: italic;
+    font-size: 15px ;
+    opacity: 0.6;
+}
+
+.about-description {
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+.about-us .member-list {
+    display: flex;
+    margin-top: 48px;
+}
+
+.about-us .member-list #member-item {
+    width: calc(100%/3);
+}
+
+.about-us .member-list #member-image {
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.tour-dates {
+    height: 800px;
+    background-color: #000;
+}
+
+.tour-dates .main-heading {
+    color: #fff;
+    text-align: center;
+    padding-top: 72px;
+}
+
+.tour-dates .sub-heading {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tour-dates .ticket-list {
+    background-color: #fff;
+    height: 40px;
+    width: 100%;
+}
+
+.tour-dates .ticket-list #month {
+    /* margin-top: 25px; */
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.tour-dates .ticket-list #sold-out {
+    background-color: #f44436;
+    margin-left: 16px;
+    padding: 0 8px;
+    display: inline-block;
+    height: 25px;
+}
