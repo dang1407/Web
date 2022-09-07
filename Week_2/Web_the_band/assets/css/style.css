@@ -30,7 +30,7 @@ html{
 }
 
 #nav .subnav {
-  list-style-type: none;
+  list-style-type: none;  /*bỏ dấu chấm tròn ở đầu phần dưới phần more*/
 }
 
 #nav > li {
@@ -49,7 +49,7 @@ html{
 
 #nav > li > a {
     color: #fff;
-    text-transform: uppercase;
+    text-transform: uppercase; /*viết hoa*/
 }
 #nav li a {
     
@@ -86,18 +86,20 @@ html{
   font-size: 15px;
 }
 
-#header .search-btn {
-  color: #fff;  
+.search-btn {
   float: right;
-  display: inline-block;
-  line-height: 46px; 
-  padding: 0px 24px;
-  cursor: pointer;
-
+  line-height: 46px;
+  width: 60px;
 }
 
 #header .search-btn:hover {
   background-color: #f44336;
+}
+
+#header .ti-search {
+  color: #fff;
+  line-height: 46px;
+  /* height: ; */
 }
 
 #slider {
@@ -135,23 +137,65 @@ html{
 }
 
 #content {
+
+}
+
+#content .content-section {
   width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto;  /*2 dòng này để căn giữa*/
+  margin-right: auto;  
+  text-align: center;
 }
 
-#content .heading {
+#content .content-heading {
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
+  font-weight: 400;/*độ dày của chữ */
+  margin-top: 74px;
+  letter-spacing: 4px; /*khoảng cách giữa các chữ*/
+  text-transform: uppercase;
 }
 
-#content .sub-heading {
-
+#content .content-subheading {
+  margin-top: 25px;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5; /*khoảng cách dòng, recommend: english:1.4, vietnamese:1.6*/
+  opacity: 0.6; /* độ mờ*/
 }
 
-#content p {
-  text-align: justify;
+#content .about-text {
+  margin-top: 25px;
+  font-size: 15px;
+  text-align: justify; /*căn đều 2 lề*/
+}
+
+#content .member-list {
+  margin-top: 48px;
+}
+
+#content .member-list #name {
+  margin: 15px 0px;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+#content .member-item {
+  float: left;
+  /* width: 33.333333%; Cách 1*/
+  width: calc(100%/3); /*cách 2*/
+}
+
+#content .member-item #member-img {
+  border-radius: 4px;
+  width: 154px;
+  /* height: 154px; */
+}
+#content .content-section #tour-dates {
+  background-color: #000;
+  margin-top: 25px;
 }
 #footer {
 
 }
+
+
