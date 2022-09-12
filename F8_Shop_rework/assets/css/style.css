@@ -1,0 +1,537 @@
+
+/* Hạn chế sử dụng các thuộc tính cứng: height, width*/
+
+/* Common */
+* {
+    /* Reset CSS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    scroll-behavior: smooth;
+}
+
+.clear {
+    clear: both;
+    /*cho thêm 1 thẻ div vào cuối thẻ đang có vấn đề với thuộc tính float*/
+}
+
+.row {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50% !important;
+}
+
+.col-third {
+    width: 33.333333% !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.header {
+    height: 46px;
+    background-color: #000;
+    /* display: inline-block;
+    width: 100%; */
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+
+
+
+#nav {
+    /* display: inline-block; */
+}
+
+#nav li {
+    display: inline-block;
+    position: relative;  /*chỉnh nav btn thành hàng ngang*/ 
+}
+
+#nav li a {            /*Navigation button*/
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 46px;
+    padding: 0 24px;
+    text-decoration: none;
+    display: inline-block;    /*Set kích thước nav btn*/
+}
+
+#nav > li:hover > a,
+#subnav > li:hover > a {             /*Hover nav btn*/
+    background-color: #ccc;
+    color: #000;
+}
+
+#subnav {
+    position: absolute;         /*kết hợp dòng 30 chỉnh 3 thẻ con thành hàng ngang xuống dưới*/
+    background-color: #fff;
+    width: 170px;
+    display: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#subnav li {
+    width: 100%;
+    position: relative;
+}
+
+#subnav  li  a {          /*thẻ con của more*/
+    color: #000;
+    padding: 0 10px;
+    line-height: 38px;
+    width: 100%;
+}
+
+#nav > li:hover > #subnav {  /*Trỏ chuột vào more */
+    display: block;
+}
+
+.ti-angle-down {
+    color: #fff;
+    font-size: 14px;
+}
+
+#nav  li:hover  .ti-angle-down {
+    color: #000;
+}
+
+.header .search-btn {
+    height: 46px;
+    width: 62px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+}
+
+.header .ti-search {
+    color: #fff;
+    line-height: 46px;
+}
+
+.header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+/* Begin Slider */
+
+.slider {
+    padding-top: 50%;
+    background: url("../img/slider_1.jpg") top center / cover no-repeat ;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    
+    margin-top: 46px;
+}
+
+.slider-head {
+    position: absolute;
+    bottom: 48px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.slider-head-1 {
+    font-size: 24px;
+    font-weight: 300;
+    padding: 32px 0;
+}
+
+.slider-head-2 {
+    font-size: 15px;
+}
+
+.content {
+    /* min-height: 1000px; */
+}
+
+.content-section {
+    padding: 64px 0;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .content-heading {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 24px;
+}
+
+.content .content-sub-heading {
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.6;
+    margin-top: 25px;
+}
+
+#content-paragraph {
+    text-align: justify;
+    margin-top: 25px;
+    line-height: 1.5;
+}
+
+.content-section .members-list {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-around;
+    /* margin-bottom: 48px; */
+    /* overflow: hidden;      Chỉnh Tour Dates khỏi dính vào phần ảnh */
+}
+
+
+
+.content #member-name {
+    margin-bottom: 15px;
+}
+
+.content #member-img {
+    width: 154px;
+    border-radius: 4px;
+}
+
+.tour-dates {
+    background-color: #000;
+}
+
+.tour-dates .content-section {
+    /* color: #fff; */
+    padding-bottom: 32px;
+}
+
+
+
+/* Ticket list */
+
+.tour-dates .tickets-list {
+    /* color: #fff; */
+    list-style-type: none;
+    margin-top: 40px;
+}
+
+.tour-dates .tickets-list li {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 12px 16px;
+    color: #757575;
+}
+
+
+.tour-dates .tickets-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.tour-dates .tickets-list #ticket-quantity {
+    background-color: #000;
+    border-radius: 50%;
+    color: #FFF;
+    width: 24px;
+    height: 22px;
+    float: right;
+    text-align: center;
+}
+
+.tour-dates .tour-places {
+    /* display: flex; */
+    width: 816px;
+    /* margin-left: auto;
+    margin-right: auto; */
+
+    margin: 32px -8px 0;
+    padding-bottom: 96px;
+    
+}
+
+.tour-dates  .tour-place {
+    width: 33.3333%;
+    height: 388px;
+    float: left;
+    padding: 0 8px;
+    /* margin-left: -8px;
+    margin-right: -8px; */
+}
+
+.tour-dates .tour-place img {
+    width: 100%;
+    display: block;
+}
+
+
+
+.tour-place .place-img:hover {
+    opacity: 0.60;
+}
+
+.tour-dates .tour-place .place-inf {
+    padding: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fff;
+}
+
+.tour-dates .tour-place .place {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tour-dates .tour-place .time {
+    opacity: 0.6;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 16px;
+}
+
+.tour-dates .tour-place .description {
+    font-size: 15px;
+    margin: 15px 0;
+    font-weight: lighter;
+}
+
+.tour-dates .tour-place .buy-ticket {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 16px 11px;
+    margin-top: 15px;
+    width: 112px;
+    height: 38px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+}
+
+.tour-place .buy-ticket:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    /* display: flex; */
+    align-items: center;   /*Căn giữa chiều dọc*/
+    justify-content: center; /*Căn giữa chiều ngang*/
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    max-width: calc(100%+32px);
+    animation: modalFadeIn ease 0.4s;
+}
+
+.modal-header {
+    background-color: #009688;
+    height: 129px;
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.modal-header .ti-bag {
+    margin-right: 16px;
+}
+
+.modal .ti-close {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.modal .ti-close:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-body {
+    padding: 16px;
+    display: inline-block;
+    width: 100%;
+}
+
+.modal-label {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.modal-input {
+    width: 100%;
+    font-size: 15px;
+    padding: 8px;
+    margin-bottom: 28px;
+}
+
+#pay-tickets {
+    background-color: #009688;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+#pay-tickets:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.modal-help {
+    text-align: right;
+}
+
+.modal-help a {
+    color: #2196f3;
+}
+
+
+/* Modal action */
+
+.modal.open {
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-130px);
+    } 
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+/* Contact */
+
+.contact-body > .row{
+    padding: 32px 0;
+}
+
+.contact-body {
+    margin-top: 25px;
+}
+
+.contact-icon {
+    margin-right: 16px;
+}
+
+
+.contact-body form input{
+   width: 100%;
+   padding: 8px;
+   border: 1px solid #ccc;
+   margin-bottom: 8px;
+   /* outline: 1px solid #2196f3; */
+}
+
+.contact-body .row p {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-send-btn {
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 16px;
+    border: none;
+    float: right;
+    margin: 8px 0;
+}
+
+.contact-send-btn:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Img place */
+
+.img-place img { 
+    
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 64px;
+    font-size: 24px;
+    opacity: 0.6;
+}
+
+.footer .footer-icon a{
+    text-decoration: none;
+    color: #000;
+}
+
+.footer .footer-icon a:hover {
+    opacity: 0.7;
+}
+.footer-power {
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+.footer-power a {
+    color: #000;
+}
