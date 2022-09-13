@@ -1,8 +1,82 @@
-* {
+/* BEGIN COMMON */
+
+* { /*Reset CSS*/
     margin: 0;    /*Lề */
-    padding: 10,10,10,10;  /*Đệm lót*/
+    padding: 0;  /*Đệm lót*/
+    box-sizing: border-box;
 }
 
-.content {
-    background-color: #ebebeb;
+html {
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.btn-hover:hover,
+.btn-hover:hover > a{
+    background-color: #ccc;
+    color: #000 !important;
+} 
+
+.header {
+    height: 46px;
+    background-color: #000;
+}
+
+.nav {
+    display: inline-block;
+    position: relative;
+}
+
+.nav .nav-btn {
+    display: inline-block;
+    font-size: 15px;
+}
+
+.nav > .nav-btn > a {
+    color: #fff;
+    line-height: 46px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 24px;
+    display: inline-block;
+}
+
+.subnav {
+    position: absolute;
+    width: 160px;
+    display: none;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.subnav-btn{
+    background-color: #fff;
+    width: 100%;
+}
+
+.subnav-btn > a {
+    width: 100%;
+    text-decoration: none;
+    padding: 0 16px;
+    
+    display: inline-block;
+    color: #000;
+    line-height: 38px;
+    font-size: 15px;
+}
+
+/*Di chuột vào more hiện menu*/
+/* .nav > .nav-btn:hover > .subnav { 
+    display: block;
+} */
+
+.btn-hover:hover > .subnav {
+    display: block;
+}
+
+
+
+
+.slider {
+    min-height: 500px;
+    background-color: #fff;
 }
